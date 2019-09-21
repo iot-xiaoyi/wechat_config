@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>s
+  </view> -->
+
+  <view class="section">
+    <input  class="config" bindinput="bindKeyInputSsid" placeholder="请输入ssid"/>
+    <input  class="config" bindinput="bindKeyInputPwd" password type="text" placeholder="请输入密码"/>
+
+    <button class="section__title" type="primary" bindtap="startConfig"> 开始配网 </button>
+
+    <textarea class="res_text" name="textarea">{{config_res}}</textarea>
+  </view>
+
+</view>

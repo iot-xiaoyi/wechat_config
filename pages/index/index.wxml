@@ -14,7 +14,7 @@
 
     <button class="section__title" type="primary" bindtap="startConfig"> 开始配网 </button>
 
-    <textarea class="res_text" name="textarea">{{config_res}}</textarea>
+    <textarea class="res_text"  auto-height  >{{config_res}}</textarea>
   </view>
 
 </view>

@@ -73,7 +73,7 @@ Page({
     var json = JSON.stringify(object);//JSON.stringify()
 
     udp.send({
-      address: '192.168.1.255',
+      address: '192.168.10.1',
       port: 20032,
       message: json
     })
@@ -91,8 +91,12 @@ Page({
       decodedString = decodeURIComponent(escape((encodedString)));//没有这一步中文会乱码
 
       console.log('str===' + decodedString)
+      var obj = JSON.parse(decodedString);
+      var res_data;
+      res_data = "type:" + obj.type + '\n';
+      res_data = res_data + "mac:" +  obj .mac + '\n' ;
       that.setData({
-        config_res: decodedString
+        config_res: res_data
       })
 
     })
